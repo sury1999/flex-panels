@@ -1,0 +1,76 @@
+body {
+  box-sizing: border-box;
+  background: grey;
+  font-family: times;
+  font-size: 25px;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background: yellow;
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition:
+  font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+  flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+  background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 {background-image: url(https://wallpaperplay.com/walls/full/e/3/6/138503.jpg);}
+.panel2 {background-image: url(https://wallpapercave.com/wp/MAmPaLt.jpg);}
+.panel3 {background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-cool-gradient-fireworks-technology-background-material-backgroundgradientcolorfireworks-backgroundtechnical-materialposter-image_50058.jpg);}
+.panel4 {background-image: url(https://i.pinimg.com/originals/25/8f/18/258f18da8dfe10d36704f9dccaaa17dd.jpg);}
+.panel5 {background-image: url(https://wallpaperplay.com/walls/full/e/8/6/253787.jpg);}
+
+.panel >* {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel >*:first-child {transform: translateY(-100%);}
+.panel.open-active >*:first-child {transform: translateY(0);}
+.panel >*:last-child {transform: translateY(+100%);}
+.panel.open-active >*:last-child {transform: translateY(0);}
+
+.panel p {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
+
+.cta{
+  color:white;
+  text-decoration: none;
+}
